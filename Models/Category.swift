@@ -1,6 +1,6 @@
 import Foundation
 
-//struct Categories {
+//struct Category {
 //    let id : Int
 //    let category: String
 //    let imageName: String
