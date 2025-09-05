@@ -1,4 +1,4 @@
-import GoogleSignInSwift
+import GoogleSignIn
 import SwiftUI
 
 struct AutentificationView: View {

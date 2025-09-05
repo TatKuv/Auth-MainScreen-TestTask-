@@ -1,10 +1,3 @@
-//
-//  ProductsByCategoriesSection.swift
-//  Auth+MainScreen(TestTask)
-//
-//  Created by Tatiana Kuvarzina on 05.09.2025.
-//
-
 import SwiftUI
 
 struct ProductsByCategoriesSectionView: View {
