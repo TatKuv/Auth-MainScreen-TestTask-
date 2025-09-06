@@ -19,6 +19,7 @@ struct AutentificationView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .foregroundStyle(.darkBluePrelight)
                     .padding(.top, 48)
+                    .padding(.leading,63)
                 
                 VStack {
                     VStack(alignment: .leading, spacing: 24) {
@@ -37,7 +38,7 @@ struct AutentificationView: View {
                     
                     Spacer()
                     
-                    Image("LogoFlower")
+                    Image("LogoFlower") //можно в ZSack
                         .resizable()
                         .scaledToFill()
                         .frame(width: 171, height: 285)
