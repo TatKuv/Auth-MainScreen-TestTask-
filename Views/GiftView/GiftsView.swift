@@ -2,6 +2,7 @@ import SwiftUI
 
 struct GiftsView: View {
     @StateObject private var viewModel = GiftsViewModel()
+    @State private var searchText: String = "" // во вью модель
     let columns = [
         GridItem(.adaptive(minimum: 160))
     ]
@@ -15,6 +16,25 @@ struct GiftsView: View {
                 
                 ScrollView {
                     LazyVStack(alignment: .leading, pinnedViews: .sectionHeaders) {
+                        
+                        Section {
+                                HStack {
+                                    Text("GIFTS")
+                                        .font(.custom("BebasNeue-Regular", size: 64))
+                                        .tracking(-1)
+                                        .foregroundColor(.darkBlue)
+                                    
+                                    Spacer()
+                                    
+                                    TextField("\(Image(systemName: "magnifyingglass")) Search", text: $searchText)
+                                        .padding(.horizontal, 8)
+                                        .frame(width: 110, height: 42)
+                                        .background(.adaptiveWhite)
+                                        .cornerRadius(16)
+                                }
+                                .padding(.horizontal)
+                                .padding(.bottom, 1)
+                            }
                         
                         Section {
                             EventsSectionView()
@@ -40,7 +60,7 @@ struct GiftsView: View {
             }
             
             
-            .navigationTitle("GIFTS") // шрифт и буквы
+            //.navigationTitle("GIFTS") // шрифт и буквы
             //.searchable(text: $viewModel.searchText, prompt: "Search")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -74,3 +94,4 @@ struct GiftsView: View {
 #Preview {
     GiftsView()
 }
+

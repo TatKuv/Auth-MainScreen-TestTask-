@@ -11,19 +11,30 @@ struct AutentificationView: View {
             ZStack {
                 Color.backgroundLightBlue
                     .ignoresSafeArea()
+                
                 Image("Vector")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 597, height: 537)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .foregroundStyle(.darkBluePrelight)
+                    .padding(.top, 48)
                 
                 VStack {
-                    //Text("WELCOME")
-                    Text("Enter your phone number. We will send you an SMS with a confirmation code to this number.")
-                        .font(.system(size: 14))
-                        .foregroundStyle(.darkBlueLightGray)
-                        .frame(width: 352, height: 42)
+                    VStack(alignment: .leading, spacing: 24) {
+                        Text("WELCOME")
+                            .font(.custom("BebasNeue-Regular", size: 64))
+                            .tracking(-1)
+                            .foregroundColor(.darkBlue)
+                            .frame(height: 55)
+                        
+                        Text("Enter your phone number. We will send you an SMS with a confirmation code to this number.")
+                            .font(.system(size: 14))
+                            .lineSpacing(5)
+                            .foregroundStyle(.darkBlueLightGray)
+                            .frame(width: 352, height: 42, alignment: .leading)
+                    }
+                    
                     Spacer()
                     
                     Image("LogoFlower")
@@ -51,16 +62,18 @@ struct AutentificationView: View {
                     .cornerRadius(10)
                     .padding(.horizontal,16)
                     
-                    Text("By continuing, you agree to Assetsy’s Terms of Use and Privacy Policy")
+                    Text("By continuing, you agree to Assetsy’s Terms of Use and Privacy Policy")
                         .font(.system(size: 11))
+                        .lineSpacing(2)
+                        .multilineTextAlignment(.center)
                         .foregroundStyle(.darkGrayNew)
-                        .frame(width: 352, height: 42)
+                        .frame(width: 197, height: 42)
                     
                     Spacer()
                 
                 }
                 
-                    .navigationTitle("WELCOME")
+                    //.navigationTitle("WELCOME")
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button("Skip") {
