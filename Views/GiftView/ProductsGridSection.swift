@@ -20,7 +20,7 @@ struct ProductsGridSection: View {
             }        }
         .padding()
         .scrollContentBackground(.hidden)
-        .background(Color.white)
+        .background(.adaptiveWhite)
         .clipShape(.rect(cornerRadius: 16))
         .padding()
     }

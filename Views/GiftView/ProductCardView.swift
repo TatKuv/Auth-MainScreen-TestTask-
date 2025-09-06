@@ -18,7 +18,7 @@ struct ProductCardView: View {
                     Image(systemName: "heart")
                         .foregroundStyle(.white)
                         .padding(8)
-                        .background(Color.black.opacity(0.5))
+                        .background(.black.opacity(0.5))
                         .clipShape(Circle())
                 }
                 .padding(6)

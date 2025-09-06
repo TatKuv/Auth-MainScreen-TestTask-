@@ -16,6 +16,7 @@ struct AutentificationView: View {
                     .scaledToFit()
                     .frame(width: 597, height: 537)
                     .frame(minWidth: 0, maxWidth: .infinity)
+                    .foregroundStyle(.darkBluePrelight)
                 
                 VStack {
                     //Text("WELCOME")
@@ -46,13 +47,13 @@ struct AutentificationView: View {
                     .foregroundStyle(.black)
                     .padding()
                     .frame(width: 362)
-                    .background(Color.white)
+                    .background(.adaptiveWhite)
                     .cornerRadius(10)
                     .padding(.horizontal,16)
                     
                     Text("By continuing, you agree to Assetsy’s Terms of Use and Privacy Policy")
                         .font(.system(size: 11))
-                        .foregroundStyle(Color(red: 58 / 255.0, green: 58 / 255.0, blue: 58 / 255.0))
+                        .foregroundStyle(.darkGrayNew)
                         .frame(width: 352, height: 42)
                     
                     Spacer()
